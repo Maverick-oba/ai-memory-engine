@@ -1,62 +1,48 @@
 # 研究・開発 GitHub 総合インデックス
 
-> 棚卸し日: 2026-10-10（JST）
->
-> **全プロジェクトの入口。** リポジトリの場所を探すときは最初にここを見る。
-> この索引は GitHub で確認できた13リポジトリと、そのうち取得できた README の記載に基づく。各リポジトリ内の全ファイル・全コミット・ローカル未push成果物を照合済みという意味ではない。
+確認日：2026-10-10（JST）。**新しいチャット・新しい作業は、このページから始める。**
 
-## まずどこを見る？
+## 最初に読む
 
-| 分類 | 目的・研究 | GitHub | 現状／参照先 |
-|---|---|---|---|
-| 中央競馬 | Ability Graph・中央Web・公開Viewer | [keiba-central-web-compass](https://github.com/Maverick-oba/keiba-central-web-compass) | 2026-10-10更新（[commit 5cd1337](https://github.com/Maverick-oba/keiba-central-web-compass/commit/5cd133716585c6f69be9c0e7f84d3f325f3c1706)）。個別正本・自動公開フローは要再確認 |
-| 中央・地方競馬 | Compass・競馬研究基盤 | [Compass](https://github.com/Maverick-oba/Compass) | README未取得。高配当A/B・通常配当・Cut/Ability等の格納位置は未特定 |
-| 地方競馬 | 地方Compass Web | [keiba-local-compass-web](https://github.com/Maverick-oba/keiba-local-compass-web) | README未取得。正本・公開手順は要確認 |
-| モバイル | Compass Flutterアプリ（Android/iOS） | [compass-app](https://github.com/Maverick-oba/compass-app) | 既存READMEはFlutter雛形。公開版との対応・release手順は未記載 |
-| 競艇 | BOAT RACE データ・AI・Compass | [boatrace-ai-compass](https://github.com/Maverick-oba/boatrace-ai-compass) | [README](https://github.com/Maverick-oba/boatrace-ai-compass/blob/main/README.md)に取得・解析・DB・公開手順。実データはローカル |
-| 競輪 | 出走表・過去データ取得・監査 | [keirin_data_lab](https://github.com/Maverick-oba/keirin_data_lab) | [README](https://github.com/Maverick-oba/keirin_data_lab/blob/main/README.md)。rawデータはローカル。バックフィルの最新完了範囲は要確認 |
-| オート | オートレース取得可能性・分析 | [auto_race_lab](https://github.com/Maverick-oba/auto_race_lab) | [README](https://github.com/Maverick-oba/auto_race_lab/blob/main/README.md)。取得元ごとの規約・許諾・検証状態に注意 |
-| Gold EA | XAUUSD TrendMagic / MACD EA | [gold-ea-research](https://github.com/Maverick-oba/gold-ea-research) | [README](https://github.com/Maverick-oba/gold-ea-research/blob/main/README.md)。研究版の正本記載あり。ただしv1.7系・v2.2研究系の区別を要確認 |
-| JP225 EA | 日経225 Rebreak EA | [jp225-ea-research](https://github.com/Maverick-oba/jp225-ea-research) | [README](https://github.com/Maverick-oba/jp225-ea-research/blob/main/README.md)。v0.7.6基準との記載 |
-| FX EA | 通貨別EA研究 | [fx-ea-research-](https://github.com/Maverick-oba/fx-ea-research-) | README未取得。通貨・ロジック・凍結版は要確認 |
-| Gold類似検索 | XAUUSD過去類似チャート | [gold-analog-lab](https://github.com/Maverick-oba/gold-analog-lab) | [README](https://github.com/Maverick-oba/gold-analog-lab/blob/main/README.md)。v0.1/v0.2/v0.2.1研究 |
-| 研究記憶・索引 | 全体案内・引き継ぎ事故防止 | [ai-memory-engine](https://github.com/Maverick-oba/ai-memory-engine) | **このREADMEが全体の入口**。既存ファイルは変更せず追加 |
-| 作業記録 | Codexテスト・PDF整理記録など | [Codex-test](https://github.com/Maverick-oba/Codex-test) | README未取得。記録の実体と配置は要調査 |
+- **[新しいチャット用の貼り付け文・作業開始／終了手順](https://github.com/Maverick-oba/Compass/blob/main/docs/git_inventory/START_HERE.md)**
+- **[13プロジェクトの詳細索引：正本・確認commit・注意点・再開地点](https://github.com/Maverick-oba/Compass/blob/main/docs/git_inventory/PROJECT_INDEX.md)**
+- [引き継ぎテンプレート](https://github.com/Maverick-oba/Compass/blob/main/docs/git_inventory/HANDOFF_TEMPLATE.md)
+- [2026-10-10のGit確認記録](https://github.com/Maverick-oba/Compass/blob/main/docs/git_inventory/inventory_20261010.json)
 
-## 正本の探し方
+詳細索引はアクセス権のあるprivateリポジトリ内に保存している。新しいチャットには、このページのURLと「対象プロジェクト」「今回の作業」を渡す。手順書が自動で読まれる保証はないので、開始時に読むよう明示する。
 
-1. この表で対象リポジトリへ移動。
-2. 各リポジトリのREADME、docs、検証結果、コミットを確認する。
-3. **実装正本・検証正本・運用正本を区別する。** 研究途中の最大値・仮説・過去の会話をそのまま運用正本にしない。
-4. Gitで確定できないものは「未確認」と記す。件数を合わせるための後付け調整は禁止。
-5. ローカルデータ・未pushファイルが必要なら、その所在とGit未保存の事実を明記する。
+## 目的別に探す
 
-## 今回の棚卸しで見つかった要注意点
-
-- **READMEが取得できなかった6件**：`ai-memory-engine`（本ファイル作成前）、`Codex-test`、`Compass`、`keiba-central-web-compass`、`keiba-local-compass-web`、`fx-ea-research-`。READMEがない可能性は高いが、アクセス／パスの問題もあるため「不存在確定」とはしない。
-- **compass-app**：READMEがFlutterテンプレートのまま。アプリの公開・復旧入口になっていない。
-- **Gold EA**：READMEでは別系統の研究をひとつの「現行基準」にまとめて読む危険がある。v1.7フォワード、v2.2研究、実稼働設定を分離して記録する必要がある。
-- **高配当A/B、通常配当、地方高配当**：研究は存在するが、この棚卸しでは保存先の実ファイル・正本コミットを未特定。**再現性確認まで完成扱いにしない**。
-- **競輪・オート**：README中に初期時点の記録とその後の進捗が併記されている。最新の監査・コミットを優先して再確認する。
-- **重要な非Git資産**：競馬・競艇DB、オッズ、Dukascopy M1、MT4実ログ、rawバックフィル等は別管理の可能性。Git索引だけでデータ復旧できると誤解しない。
-
-## 今後の標準インデックス（各リポジトリに追加する際の型）
-
-各リポジトリのREADMEか `docs/PROJECT_INDEX.md` に、次を揃える。
-
-| 項目 | 必ず記録する内容 |
+| 対象 | GitHub |
 |---|---|
-| 目的 | 何を研究・運用する場所か |
-| 状態 | 運用中／研究中／凍結／調査中 |
-| 正本 | コードパス、設定、モデルID、commit、確定日 |
-| 再現 | 元データ期間、コマンド、照合件数、監査 |
-| 運用 | 起動スクリプト、公開先、ローカルルート |
-| 注意 | 誤版、失敗条件、上書き禁止対象 |
-| 次の作業 | 未解決事項と再開地点 |
+| 中央運用・CENTRAL64・Ability Graph・公開Web | [keiba-central-web-compass](https://github.com/Maverick-oba/keiba-central-web-compass) |
+| 中央高配当・通常配当研究・地方RTD | [Compass](https://github.com/Maverick-oba/Compass) |
+| 地方Ability・地方高配当研究 | [keiba-local-compass-web](https://github.com/Maverick-oba/keiba-local-compass-web) |
+| RaceNaviモバイルアプリ | [compass-app](https://github.com/Maverick-oba/compass-app) |
+| 競艇データ・AI・公開Compass | [boatrace-ai-compass](https://github.com/Maverick-oba/boatrace-ai-compass) |
+| 競輪データ・研究 | [keirin_data_lab](https://github.com/Maverick-oba/keirin_data_lab) |
+| オート取得・公式PDF調査 | [auto_race_lab](https://github.com/Maverick-oba/auto_race_lab) |
+| Gold EA・Gold Compass研究 | [gold-ea-research](https://github.com/Maverick-oba/gold-ea-research) |
+| 日経225 EA | [jp225-ea-research](https://github.com/Maverick-oba/jp225-ea-research) |
+| USDJPY／EURUSD EA（repo名末尾のハイフンに注意） | [fx-ea-research-](https://github.com/Maverick-oba/fx-ea-research-) |
+| Gold類似チャート探索 | [gold-analog-lab](https://github.com/Maverick-oba/gold-analog-lab) |
+| 全体の入口 | [ai-memory-engine](https://github.com/Maverick-oba/ai-memory-engine) |
+| 個別作業記録・SBI PDF整理 | [Codex-test](https://github.com/Maverick-oba/Codex-test) |
 
-**運用ルール：** 重要な検証結果・判断・基準変更は、コードだけでなく根拠メモと一緒にGitへ。全体索引には場所と状態のみ記録し、詳細や巨大データは各リポジトリに置く。既存コードやフォルダを整理目的で勝手に移動・削除しない。
+## 引き継ぎ事故を防ぐルール
 
-## リンク
+1. 詳細索引から対象の仕様・採用判断・監査文書を読む。確認時のリンクはcommit固定で、その後の変更も確認する。
+2. 作業PCのrepo／branch／HEAD／未commit差分を確認する。mainだけが作業先とは限らない。
+3. 実装正本・研究版・実稼働版を区別する。古い会話、古いREADME、最高成績だけで現行正本を判断しない。
+4. データの所在・期間・SHA・時計・対象定義を照合する。件数合わせの後付け調整をしない。
+5. 終了時に結果・採否・未確認・次の1作業を対象repoへ記録し、commitとpushを別々に確認して索引を更新する。
 
-- [全リポジトリ一覧（GitHub）](https://github.com/Maverick-oba?tab=repositories)
-- [全体索引（このREADME）](https://github.com/Maverick-oba/ai-memory-engine/blob/main/README.md)
+## 今回確認した範囲
+
+接続から見えるMaverick-obaの13リポジトリ、全リモートbranch一覧、mainの全ファイル一覧、アプリ作業branchのファイル一覧、選択した仕様・監査文書の本文を照合した。全コード監査・再計算・テスト・公開URL再検証は実施していない。
+
+ローカル未commit／未push、DB、取得原本、稼働EA設定、最新バックフィルcheckpointはこの棚卸しだけでは確認できない。詳細索引に、Gitで確認した事実とローカルで必要な確認を区別して記録した。
+
+既存コード・モデル・取得データの移動、削除、再生成は行っていない。索引は作成時点の記録なので、正本変更やチャット切替時に更新する。
+
+[全リポジトリ一覧](https://github.com/Maverick-oba?tab=repositories)
